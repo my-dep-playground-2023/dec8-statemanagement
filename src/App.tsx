@@ -5,6 +5,7 @@ import './App.css'
 import {Header} from "./header/Header.tsx";
 import CustomerList from "./customer_list/CustomerList.tsx";
 import {ManageCustomer} from "./manage-customer/ManageCustomer.tsx";
+import {MainContextProvider} from "./context/MainContext.tsx";
 
 function App() {
     const headerProps={
@@ -17,10 +18,12 @@ function App() {
 
   return (
     <>
+        <MainContextProvider>
+            <Header{...headerProps}/>
+            <ManageCustomer/>
+            <CustomerList/>
+        </MainContextProvider>
 
-        <Header{...headerProps}/>
-        <ManageCustomer/>
-        <CustomerList/>
 
 
 

@@ -1,5 +1,8 @@
 import './CustomerList.css'
 import {Customer} from "../customer/Customer.tsx";
+export type TCustomer = {
+    id: string, name: string, contact: string
+}
 
  export default function CustomerList(){
     return (
